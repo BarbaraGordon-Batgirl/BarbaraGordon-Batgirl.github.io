@@ -1,5 +1,6 @@
 const text = "Hello World, I'm Anushka!";
 let i = 0;
+
 function typeWriter() {
   if (i < text.length) {
     document.getElementById("typewriter").innerHTML += text.charAt(i);
@@ -8,18 +9,13 @@ function typeWriter() {
   }
 }
 
-window.onload = () => {
-  typeWriter();
-  renderAllKuromis();
-};
-
 function fillKuromis(containerId, imageSrc) {
   const container = document.getElementById(containerId);
-  container.innerHTML = ''; // clear previous Kuromis on resize
+  container.innerHTML = '';
 
   const screenHeight = window.innerHeight;
-  const kuromiHeight = 60; // 40px image + 20px margin
-  const count = Math.ceil((screenHeight * 2) / kuromiHeight); // 2x screen height
+  const kuromiHeight = 60; // 40px + 20px margin
+  const count = Math.ceil((screenHeight * 2) / kuromiHeight);
 
   for (let i = 0; i < count; i++) {
     const img = document.createElement('img');
@@ -34,7 +30,7 @@ function renderAllKuromis() {
   fillKuromis('kuromiScrollRight', 'kuromi-icon.png');
 }
 
-// 🧠 DEBOUNCED resize
+// 🧠 Debounced Resize
 let resizeTimeout;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimeout);
@@ -42,3 +38,9 @@ window.addEventListener('resize', () => {
     renderAllKuromis();
   }, 200);
 });
+
+// ✅ On Load
+window.onload = () => {
+  typeWriter();
+  renderAllKuromis();
+};
