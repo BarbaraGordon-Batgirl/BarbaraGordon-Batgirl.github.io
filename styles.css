@@ -85,11 +85,16 @@ section h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
+  color: #333;
+}
+
+/* Only style "About Me" title with pink and star */
+#about h2 {
   color: #ff69b4;
   position: relative;
 }
 
-section h2::after {
+#about h2::after {
   content: "★";
   position: absolute;
   bottom: -10px;
