@@ -1,10 +1,9 @@
-/* Body and General Styles */
 body {
   font-family: 'Press Start 2P', monospace;
   margin: 0;
   padding: 0;
-  background-color: #fffafc;
-  color: #333;
+  background-color: #1A1A1A; /* Soft Black Background */
+  color: #FFFFFF; /* White Text */
 }
 
 /* Kuromi Border Styling */
@@ -62,7 +61,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background: #ffc3dc;
+  background: #F2A7D3; /* Soft Pink Background */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -72,13 +71,13 @@ nav {
 nav a {
   margin: 0 15px;
   text-decoration: none;
-  color: #333;
+  color: #FFFFFF; /* White Text */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ff69b4;
+  color: #5D3F7D; /* Deep Purple Hover */
 }
 
 /* Section Headings */
@@ -86,27 +85,22 @@ section h2 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.8rem;
-  color: #333;
+  color: #5D3F7D; /* Deep Purple */
   font-family: 'Press Start 2P', monospace;
-}
-
-/* Only style "About Me" title with pink and star */
-#about h2 {
-  color: #ff69b4;
   position: relative;
 }
 
-#about h2::after {
+section h2::after {
   content: "★";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
-  color: #ffc3dc;
+  color: #F2A7D3; /* Soft Pink */
 }
 
-/* About Me */
+/* About Me Section */
 .about-container {
   text-align: center;
   padding: 80px 20px;
@@ -117,7 +111,7 @@ section h2 {
   height: 150px;
   border-radius: 50%;
   margin-top: 20px;
-  border: 3px solid #ff69b4;
+  border: 3px solid #5D3F7D; /* Deep Purple Border */
 }
 
 .social-links {
@@ -127,12 +121,13 @@ section h2 {
 .social-links i {
   font-size: 24px;
   margin: 10px;
-  color: #ff69b4;
+  color: #5D3F7D; /* Deep Purple */
   transition: transform 0.3s ease;
 }
 
 .social-links i:hover {
   transform: scale(1.2);
+  color: #F2A7D3; /* Soft Pink Hover */
 }
 
 .interests, .education {
@@ -143,7 +138,7 @@ section h2 {
   font-size: 1.1rem;
 }
 
-/* Projects */
+/* Projects Section */
 .projects-container {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +150,7 @@ section h2 {
 .project-card {
   width: 300px;
   height: 300px;
-  background-color: #f0f0f0;
+  background-color: #B6A1D2; /* Muted Lavender */
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -171,11 +166,11 @@ section h2 {
 }
 
 .projects-container::-webkit-scrollbar-thumb {
-  background-color: #ff69b4;
+  background-color: #F2A7D3; /* Soft Pink Scrollbar */
   border-radius: 5px;
 }
 
-/* Skills */
+/* Skills Section */
 .skills-icons {
   display: flex;
   justify-content: center;
@@ -185,29 +180,23 @@ section h2 {
 
 .skills-icons i {
   font-size: 40px;
-  color: #ff69b4;
+  color: #F2A7D3; /* Soft Pink Icons */
   transition: transform 0.3s ease;
 }
 
 .skills-icons i:hover {
   transform: scale(1.2);
+  color: #5D3F7D; /* Deep Purple Hover */
 }
 
-/* Notes */
+/* Notes Section */
 #notes {
   text-align: center;
   padding: 40px;
-  background: #f9f9f9;
+  background: #F9F9F9;
 }
 
 #notes p {
   font-size: 1.2rem;
   color: #666;
-}
-
-/* Typewriter Style */
-#typewriter {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1.8rem;
-  color: #333;
 }
