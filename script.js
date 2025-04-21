@@ -3,34 +3,38 @@ let i = 0;
 
 function typeWriter() {
   const target = document.getElementById("typewriter");
-  if (i === 0) target.innerHTML = ""; // Clear only once per full cycle
+  target.innerHTML = "";  // Clear previous text
+  i = 0;  // Reset counter
 
-  if (i < text.length) {
-    target.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 100);
+  function typingEffect() {
+    if (i < text.length) {
+      target.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typingEffect, 100);
+    }
   }
+
+  typingEffect();  // Start typing
 }
 
 // Call typewriter once on load
 window.onload = () => {
-  typeWriter();
+  typeWriter();  // Trigger typing animation when page loads
   renderAllKuromis();
 };
 
-// Re-trigger every 15 seconds
+// Re-trigger the typewriter effect every 15 seconds
 setInterval(() => {
-  i = 0;
   typeWriter();
 }, 15000);
 
 function fillKuromis(containerId, imageSrc) {
   const container = document.getElementById(containerId);
-  container.innerHTML = '';
+  container.innerHTML = ''; // Clear previous Kuromis on resize
 
   const screenHeight = window.innerHeight;
   const kuromiHeight = 60;
-  const count = Math.ceil((screenHeight * 2) / kuromiHeight);
+  const count = Math.ceil((screenHeight * 2) / kuromiHeight); // 2x screen height
 
   for (let i = 0; i < count; i++) {
     const img = document.createElement('img');
