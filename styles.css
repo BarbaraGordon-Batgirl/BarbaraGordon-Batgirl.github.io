@@ -1,3 +1,4 @@
+/* Body and General Styles */
 body {
   font-family: 'Press Start 2P', monospace;
   margin: 0;
@@ -19,8 +20,13 @@ body {
   pointer-events: none;
 }
 
-.kuromi-left { left: 0; }
-.kuromi-right { right: 0; }
+.kuromi-left {
+  left: 0;
+}
+
+.kuromi-right {
+  right: 0;
+}
 
 .kuromi-scroll {
   display: flex;
@@ -43,8 +49,12 @@ body {
 }
 
 @keyframes scrollKuromi {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }
 
 /* Navbar */
@@ -77,21 +87,19 @@ section h2 {
   margin-bottom: 20px;
   font-size: 1.8rem;
   color: #333;
+  font-family: 'Press Start 2P', monospace;
 }
 
-/* About Me heading (pink + star) */
-#about-title {
+/* Only style "About Me" title with pink and star */
+#about h2 {
   color: #ff69b4;
-  text-align: center;
   position: relative;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
 }
 
-#about-title::after {
+#about h2::after {
   content: "★";
   position: absolute;
-  bottom: -20px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.2rem;
@@ -195,4 +203,11 @@ section h2 {
 #notes p {
   font-size: 1.2rem;
   color: #666;
+}
+
+/* Typewriter Style */
+#typewriter {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.8rem;
+  color: #333;
 }
